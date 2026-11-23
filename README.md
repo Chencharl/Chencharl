@@ -37,7 +37,7 @@
 </tr>
 </table>
 
-### RNA Layout Tool · publication-ready RNA structure figures
+### RNA Layout Tool · cloverleaf figures for cytosolic tRNAs
 
 <table width="100%" cellspacing="0" cellpadding="8" border="0">
 <tr>
@@ -51,32 +51,17 @@
 </td>
 <td width="42%" valign="top">
 
-**What it does.** Draws tRNA cloverleaf and rRNA secondary-structure figures from an explicit sequence, a fixed structure template, and an annotation table. It plots structure; it does not predict it.
+**What it does.** Lays out cytosolic tRNA sequences as cloverleaf figures. The secondary structure for each gene is taken from its GtRNAdb (tRNAscan-SE) result; the tool draws that structure and does not predict one.
 
-**The hard part.** Sprinzl numbering is not derivable from sequence alone. Positions such as 17, 17A, 20A and 20B need a human decision, so the editor separates the label shown on the figure from the template slot that sets its coordinates. Modifications, isoforms, truncations and terminal chemistry live on separate annotation layers.
+**Output.** Editable SVG, PNG, and figure JSON, with modified positions marked on the figure.
 
-**Output.** Editable SVG, PNG, and figure JSON.
-
-<sub>Figure: yeast tRNA-Phe, a public reference sequence, drawn one bubble per base with its 14 known modifications.</sub>
+<sub>Figure: yeast tRNA-Phe, a public reference sequence, drawn one bubble per base.</sub>
 
 [Try it live](https://rna-layout-tool.vercel.app/) · [Repository](https://github.com/Chencharl/rna-layout-tool)
 
 </td>
 </tr>
 </table>
-
-## LC-MS RNA sequencing
-
-My main work is turning LC-MS data from RNA hydrolysis ladders into modification maps that hold up in review.
-
-| Stage | Detail |
-| --- | --- |
-| **Input** | Deconvoluted mass lists from 5′ and 3′ ladders and intact-mass runs, across technical and biological replicates |
-| **Judgment I am responsible for** | Mass-matching tolerance (10 ppm), which ladder direction and terminus model supports a call, when a gap is a modification rather than a missing fragment, and treating a missing position as missing instead of zero |
-| **Output** | Sprinzl-numbered modification maps, site-level stoichiometry of partially modified positions, per-run QC flags, and figures built to journal specifications |
-| **Ambiguity that remains** | Mass-silent and isobaric modifications (Ψ vs U, positional methyl isomers) cannot be resolved by mass alone; ambiguous Sprinzl positions still need manual confirmation |
-
-<sub>Pipelines and data from ongoing studies stay private until publication. The public tools above use synthetic data or public reference sequences.</sub>
 
 ## More projects
 
